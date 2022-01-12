@@ -1,0 +1,32 @@
+
+
+#searchDiv {
+    background-color: red;
+
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+#cardsContainer {
+    
+}   
+
+.searchDivContents {    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.cards {
+    display: inline-block;
+    width: 250px;
+    height:250px;
+    
+    border: 3px solid green;
+    padding: 10px;
+
+    background-color: blue;
+}
