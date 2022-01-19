@@ -23,9 +23,11 @@ const staticListeners = (() => {
                    //clear div
                    document.getElementById('cardsContainer').innerHTML = '';
                    logic.getData(userInput);
+                   document.getElementById('userInput').focus();
                }
                else {
                 logic.getData(userInput);
+                document.getElementById('userInput').focus();
                }
                
            }

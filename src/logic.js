@@ -6,7 +6,11 @@ const logic = (() => {
 
     const init = function() {
         console.log('logic init');
+        console.log(document.getElementById('userInput'));
+        //document.getElementById('userInput').focus();
         this.getData('London');
+        
+        
         //dom.createCards(); RUN THIS IN GETDATA??
     }
     

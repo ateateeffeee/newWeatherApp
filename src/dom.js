@@ -2,9 +2,28 @@ const dom = (() => {
 
     const init = function() {
         //console.log('dom init');
+        this.createHeader();
         this.createContentDiv();
         this.createSearchDiv();
+        this.createFooter();
+        document.getElementById('userInput').focus();
+        
+        
         //this.createCards();
+    }
+
+    const createHeader = function() {
+        let header = document.createElement('div');
+        header.id = 'header';
+
+        let headerText = document.createElement('div');
+        headerText.id = 'headerText';
+        headerText.innerHTML = 'Current Weather';
+
+        //Append
+        document.body.append(header);
+
+        header.append(headerText);
     }
 
     const createContentDiv = function() {
@@ -25,7 +44,7 @@ const dom = (() => {
         let userInput = document.createElement('input');
         userInput.id = 'userInput';
         userInput.className = 'searchDivContents';
-        userInput.placeholder = 'City name';
+        userInput.value = 'London';
 
         let searchBtn = document.createElement('button');
         searchBtn.id = 'searchBtn';
@@ -128,7 +147,7 @@ const dom = (() => {
         card1.append(precipText);
         card1.append(humidText);
 
-        //LEFT OFF HERE. TRYING TO MAKE CARDS LEVEL. 
+        //LEFT OFF HERE. TRYING TO MAKE CARDS LEVEL!!! 
         //I THINK IT'S BECAUSE OF THE EXTRA FIELDS ON TEMP CARD
         //GOOGLE OR PUT SOME BLANK ONES ON THE OTHERS IDC
 
@@ -155,11 +174,31 @@ const dom = (() => {
         card2.append(descText);
     }
 
+    const createFooter = function() {
+        let content = document.getElementById('content');
+
+        let footer = document.createElement('div');
+        footer.id = 'footer';
+
+        let text = document.createElement('div');
+        text.id = 'footerText';
+        text.innerHTML = 'Powered by BrockDiesel News';
+
+        //Append
+        document.body.append(footer);
+
+        footer.append(text);
+
+        console.log('hooray');
+    }
+
     return {
         init,
+        createHeader,
         createContentDiv,
         createSearchDiv,
         createCards,
+        createFooter,
     }
 
 
