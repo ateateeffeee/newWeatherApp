@@ -1,15 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+#content {
+
+}
 
 #searchDiv {
-    background-color: red;
+    background-color: black;
 
     margin: auto;
-    width: 50%;
-    border: 3px solid green;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+    border: 0px solid #07a3c8;
     padding: 10px;
 }
 
 #cardsContainer {
+    display: flex;
+    width: 900px;
+    margin: auto;
+    
+    
     
 }   
 
@@ -21,12 +43,76 @@
 }
 
 .cards {
+    flex: 1;
     display: inline-block;
     width: 250px;
     height:250px;
     
-    border: 3px solid green;
+    border: 0px solid green;
     padding: 10px;
+    margin-left: 20px;
 
-    background-color: blue;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+
+    border-radius: 8px;
+
+    background-color: #65ccff;
+}
+
+#header {
+    background-color: #65ccff;
+    border-radius: 8px;
+
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+
+}
+
+#searchDiv {
+    display: flex;
+}
+
+#userInput {
+    background-color: black;
+    border: none;
+
+    color: white;
+    font-size: 25px;
+
+    
+}
+
+#searchBtn {
+    background-color: black;
+    border: 2px solid #07a3c8;
+    
+    color: white;
+    font-size: 25px;
+}
+
+
+#card1 {
+}
+
+
+
+
+#footer {
+    background-color: #65ccff;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+}
+
+#footerText {
+    padding: 10px;
 }
