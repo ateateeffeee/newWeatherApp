@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html, body {
@@ -35,6 +36,35 @@ body {
     
 }   
 
+#tempContainer {
+    margin-top: 25%;
+}
+
+.temps {
+    display: inline-block;
+    padding: 5px;
+}
+
+#currentTemp {
+    font-size: 80px;
+}
+
+#highTemp {
+    color: red;
+}
+
+#lowTemp {
+    color: blue;
+}
+
+
+#card1Container {
+    margin-top: 35%;
+}
+
+#card2Desc {
+    margin-top: 35%
+}
 .searchDivContents {    
     display: block;
     margin-left: auto;
@@ -54,6 +84,7 @@ body {
 
     text-align: center;
     font-size: 25px;
+    
     color: black;
 
     border-radius: 8px;
@@ -63,6 +94,7 @@ body {
 
 #header {
     background-color: #65ccff;
+    border-color: white;
     border-radius: 8px;
 
     width: 50%;
