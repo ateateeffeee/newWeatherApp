@@ -91,34 +91,48 @@ const dom = (() => {
         card0Title.innerHTML = 'Temperature';
 
         let tempText = document.createElement('div');
-        tempText.className = 'cardData';
+        tempText.id = 'currentTemp';
+        tempText.className = 'temps';
         tempText.innerHTML = temp + '°';
 
         let highText = document.createElement('div');
-        highText.className = 'cardData';
         highText.id = 'highTemp';
         highText.innerHTML = high + '°';
 
         let lowText = document.createElement('div');
-        lowText.className = 'cardData';
         lowText.id = 'lowTemp';
         lowText.innerHTML = low + '°';
 
         let feelsLikeText = document.createElement('div');
         feelsLikeText.className = 'cardData';
         feelsLikeText.innerHTML = "Feels like: " + feelsLike + '°';
-        
 
+        let highLowContainer = document.createElement('div');
+        highLowContainer.id = 'highLowContainer';
+        highLowContainer.className = 'temps';
 
+        let tempContainer = document.createElement('div');
+        tempContainer.id = 'tempContainer';
 
         //Append
         container.append(card0);
 
-        card0.append(card0Title);
-        card0.append(tempText);
-        card0.append(highText);
-        card0.append(lowText);
-        card0.append(feelsLikeText);
+        highLowContainer.append(highText);
+        highLowContainer.append(lowText);
+
+        tempContainer.append(tempText);
+        tempContainer.append(highLowContainer);
+
+        //Title no longer necessary
+        //card0.append(card0Title);
+
+        card0.append(tempContainer);
+        //card0.append(highText);
+        //card0.append(lowText);
+        //card0.append(highLowContainer)
+
+        //Removing this for better formatting of temp, high, and low
+        //card0.append(feelsLikeText);
 
 
     }
@@ -135,27 +149,30 @@ const dom = (() => {
 
         let precipText = document.createElement('div');
         precipText.className = 'cardData';
-        precipText.innerHTML = precip + '%';
+        precipText.innerHTML = 'Precipitation: ' + precip + '%';
 
         let humidText = document.createElement('div');
         humidText.className = 'cardData';
-        humidText.innerHTML = humid + '%';
+        humidText.innerHTML = 'Humidity: ' + humid + '%';
+
+        let card1TextContainer = document.createElement('div');
+        card1TextContainer.id = 'card1Container';
 
         //Append
         container.append(card1);
 
-        card1.append(precipText);
-        card1.append(humidText);
+        card1TextContainer.append(precipText);
+        card1TextContainer.append(humidText);
 
-        //LEFT OFF HERE. TRYING TO MAKE CARDS LEVEL!!! 
-        //I THINK IT'S BECAUSE OF THE EXTRA FIELDS ON TEMP CARD
-        //GOOGLE OR PUT SOME BLANK ONES ON THE OTHERS IDC
+        card1.append(card1TextContainer);
+
+        //card1.append(precipText);
+        //card1.append(humidText);
 
 
     }
 
     const createDescCard = function(desc) {
-        //yeh
         let container = document.getElementById('cardsContainer');
 
         console.log('desc card');
@@ -165,6 +182,7 @@ const dom = (() => {
         card2.className = 'cards';
 
         let descText = document.createElement('div');
+        descText.id = 'card2Desc';
         descText.className = 'cardData';
         descText.innerHTML = desc + '.';
 

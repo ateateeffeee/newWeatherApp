@@ -135,7 +135,6 @@ const logic = (() => {
 
     const kelvinToFahrenheit = function(kelvin) {
         let fahrenheit = ((kelvin - 273.15) * (9/5)) + 32;
-        //LEFT OFF HERE. DO THIS FOR ALL OF EM
         return Math.round(fahrenheit);
     }
 
@@ -146,8 +145,6 @@ const logic = (() => {
 
 
     const getUserInput = function() {
-        //left off here
-        //this will be triggered by static listener
         let cityField = document.getElementById('cityField');
     }
 
